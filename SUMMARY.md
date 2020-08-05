@@ -16,5 +16,5 @@
     * [工作流](Spider/ScrapySpider.md)
     * [新闻](Spider/LongTaskSpider.md)
 * [开发](Development/README.md)
-    * [代码规范](Development/Component.md)
+    * [代码规范](Development/code-standard.md)
     * [组件](Development/Component.md)
