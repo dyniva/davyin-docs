@@ -91,7 +91,7 @@ if ((isset($key) && !empty($user->uid) && $key == $user->uid) || (isset($user->c
   }
 ?>
 ```
-##	函数调用（Function Calls）
+## 函数调用（Function Calls）
 调用函数时，函数名与左括号之间没有空格，除最后一个参数外，每个参数后的 , 都应跟上一个空格，如：
 ```
 <?php
@@ -105,7 +105,7 @@ $short         = foo($bar);
 $long_variable = foo($baz);
 ?>
 ```
-##	函数声明（Function Declarations）
+## 函数声明（Function Declarations）
 包含默认值的参数应当放在最后，当函数拥有返回值时，尽量返回便于理解的值：
 ```
 <?php
@@ -115,7 +115,7 @@ function funstuff_system($system, $field = 'description') {
 }
 ?>
 ```
-##	类构造器调用（Class Constructor Calls）
+## 类构造器调用（Class Constructor Calls）
 当调用不带参数的类构造器时，始终包含括号
 ```
 <?php
@@ -136,7 +136,7 @@ $foo = new $bar();
 $baz = new $bar($arg1, $arg2);
 ?>
 ```
-##	数组（Array）
+## 数组（Array）
 数组的值之间应使用空格分隔，赋值操作符号（=>）左右也应包含空格：
 ```
 <?php
@@ -156,7 +156,7 @@ $form['title'] = array(
 ?>
 ```
 注意：最后一个数组元素末尾有一个逗号，这并不是手误，而是避免有新元素加入到最后之后因缺少逗号而出现解析错误。（从某种程度上来讲，在最后一个数组元素末尾加上逗号是一种推荐的做法，甚至在向drupal.org提交代码时，一些代码规范检测脚本会因为最后一个元素没有添加逗号而出现警告提示。）
-##	引号（Quotes）
+## 引号（Quotes）
 Drupal 对于单引号和双引号的使用并没有很强硬的标准，只需在同一模块内保持用法的统一即可。
 使用单引号的效率要高于双引号，因为解析器不需要到引号之间查找变量。以下是使用双引号的两种情况：
 -	引号中间带有变量，如
@@ -192,7 +192,7 @@ $string .= $bar;
 $string .= baz();
 ?>
 ```
-##	注释（Comment）
+## 注释（Comment）
 注释规范单独在 Doxygen及注释格式规范页面 讨论
 引入代码（Including Code）
 任何无条件引用文件的情况下，使用 require_once(), 任何有条件引用文件的情况，则使用 include_once(). 这两条语句都会保证文件只被引入一次。
@@ -208,19 +208,19 @@ include_once ./includes/mymodule_formatting.inc
 require_once DRUPAL_ROOT . '/' . variable_get('cache_inc', 'includes/cache.inc');
 ?>
 ```
-##	PHP 代码标签（PHP Code Tags）
+## PHP 代码标签（PHP Code Tags）
 始终使用<?php ?>来界定PHP代码而不使用要 ?>。这是为了遵循Drupal规范，同时也便于代码在其它系统和平台中被引用。
 自 Drupal 4.7 开始，最后的 ?> 都故意被忽略不写，原因如下：
 -	移除它可以避免在文件末尾出现空白字符，这些空白字符可能导致“文件头已发送（header already sent）”错误，XHTML/XML验证错误，及其它问题
 -	PHP 官方说明结尾的PHP界定符是可选项
 -	PHP.net 自身也移除了文件末尾的界定符（如 prepend.inc ）
-##	分号（Semicolons）
+## 分号（Semicolons）
 PHP 语言要求除了代码块以外，大多数行尾都要跟上分号。Drupal 代码规范同样有此要求，并且对于代码块也是如此。以下是一个单行代码块的示例：
 <?php print $tax; ?> -- YES
 <?php print $tax ?> -- NO
 示例 URL（Example URL）
 使用 example.com 表示所有示例 URLs
-##	命名规范（Naming Conventions）
+## 命名规范（Naming Conventions）
 ###	函数与变量（Functions and Variables）
 函数与变量名称应该使用小写字母，且单词之间使用下划线分隔。函数应该使用模块组/模块名称作为前缀，以避免与不同模块间的冲突。
 ###	持久变量（Persistent Variables）
@@ -246,10 +246,10 @@ if (!defined('MAINTENANCE_MODE')) {
 }
 ?>
 ```
-###	全局变量（Global Variables）
+### 全局变量（Global Variables）
 定义全局变量时，应当使用下划线加模块/主题名称开头
 
-###	类（Class）
+### 类（Class）
 类名应使用驼峰式命名（即单词首字母大写）
 ```
 <?php
@@ -264,10 +264,10 @@ public $lastStatement;
 ```
 定义访问权限时，使用 protected 而代替 private，从而其它的类可以在必要时扩展和更新方法。Protected 和 public 函数和变量不应以下划线开头。
 更多关于面向对象的编码规范
-###	文件名（Filename）
+### 文件名（Filename）
 所有文档文件都应加上 .txt 后缀，以便于 Windows 用户查看。同时，所有文件名称应该全部大写，而文件后缀应该全部小写。
 如 README.txt, INSTALL.txt, TODO.txt, CHANGELOG.txt 等等。
-##	辅助模块及工具
+## 辅助模块及工具
 -	Coder 模块：可以遵循部分以上代码规范，对代码进行审查及修改建议
 -	Drupal Code Sniffer：代码规范检测工具
 -	PAReview.sh：还处理沙盒中的代码规范检测脚本，几乎严格遵守以上所有代码规范并给出修改建议。
