@@ -25,6 +25,7 @@
        * [主题开发](Development/Theme.md)
        * [日志](Development/Logs.md)
        * [调试模式](Development/Debug.md)
+   * [API](Development/API.md)
 
 * [站点管理系统](README.md)
    * [简介](SiteFactory/README.md)
