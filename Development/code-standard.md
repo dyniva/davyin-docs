@@ -246,9 +246,10 @@ if (!defined('MAINTENANCE_MODE')) {
 }
 ?>
 ```
-2.15.4	全局变量（Global Variables）
+###	全局变量（Global Variables）
 定义全局变量时，应当使用下划线加模块/主题名称开头
-2.15.5	类（Class）
+
+###	类（Class）
 类名应使用驼峰式命名（即单词首字母大写）
 ```
 <?php
