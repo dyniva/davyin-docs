@@ -1,7 +1,7 @@
 # Summary
 
 * [内容管理系统](README.md)
-   * [快速开始](QuickStart/README.md)
+   * [快速开始](Quickstart/README.md)
    * [安装](Installation/README.md)
        * [Docker](Installation/Docker.md)
        * [Kubernetes](Installation/Kubernetes.md)
